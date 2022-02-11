@@ -90,3 +90,4 @@ spec:
                 --docker-username=AWS \
                 --docker-password="$(</token/ecr-token)" \
                 -o yaml | kubectl apply -f -
+              kubectl delete pod -l app=kpack-controller -n kpack
